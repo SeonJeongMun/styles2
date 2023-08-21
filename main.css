@@ -1,34 +1,12 @@
 /* 폰트 텍스트 관련 속성
 
-font(shortand) 단축속성
-
+letter-spacing 글자간 간격
+ex) 5px라고 하면 normal에다가 5px 더한것 음수가능
+, word-spacing 단어간 간격 %값 가능 px em도 가능
 
 */
 
-.default {
-    font: 20px 'Times New Roman', Times, serif;
-}
-
 .text {
-    color:red;
-    font-size: 20px;
-    font-family:'Times New Roman', Times, serif;
-
-    /* 위 내용이랑
-    font: 20px 'Times New Roman', Times, serif;
-    한 거랑 완전 똑같음 
-    사이즈와 패밀리는 필수값
-    
-    <font-style font-weight는 사이즈보다 앞에 작성해야함>
-    font: italic 800 20px 'Times New Roman', Times, serif;
-    
-    <line-height는 사이즈 뒤에 /하고 작성>
-    font: italic 800 20px/1.7 'Times New Roman', Times, serif;
-    
-    주의) 
-    font-style: italic;
-    font: 100 20px/1.7...
-    이런식으로 font에서 italic 생략하면 초기값나옴. 적용안됨
-    단 font-style이 font 아래에 오면 initial 했다가 적용하는것이므로 되긴함.
-
-    */
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
