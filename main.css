@@ -1,12 +1,26 @@
 /* 폰트 텍스트 관련 속성
 
-letter-spacing 글자간 간격
-ex) 5px라고 하면 normal에다가 5px 더한것 음수가능
-, word-spacing 단어간 간격 %값 가능 px em도 가능
-
+text-align 텍스트 정렬 블럭요소
+p는 블럭요소(늘어난 화면길이대로) span은 인라인요소(내용물 가로길이따라)
 */
 
-.text {
-    letter-spacing: 5px;
-    word-spacing: 10px;
+p, span {
+    background-color: red;
+}
+
+.block {
+    text-align: center;
+}
+.container {
+    text-align: center; 
+}
+.inline {
+    text-align: center;
+    /* 인라인요소라서 적용안됨
+    이 때는 span이 들어있는 div(블럭요소)에 text-align 하기
+    ex)
+    .container {
+        text-align: center; 
+    }
+    */
 }
