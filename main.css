@@ -1,0 +1,12 @@
+/* 폰트 텍스트 관련 속성
+
+font-family,
+폰트 맨 앞에것부터 차례대로 적용해보고 없으면 다음으로 넘어가는 식
+폰트 이름 사이에 스페이스가 있으면 작은 따옴표해주기
+line-height
+테스트
+*/
+
+.text {
+    font-family:'Times New Roman', Times, serif;
+}
