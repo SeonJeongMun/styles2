@@ -1,16 +1,22 @@
-/* 
-박스모델 구조
-margin
-border
-padding
-content
+/* 박스모델
+크기= width, height
+초기값 auto
+상속 x
+inline 요소는 콘텐츠가 자동으로 width, height 설정 따라서 
+width, height 설정 불가
+
 */
     
-.box {
-    width: 200px;
+.block {
+    width: 300px;
     height: 200px;
+    background-color: wheat;
+}
+.inline {
+    width: 300px;
+    height: 200px;
+    /* 해도 적용안됨 */
+    background-color: yellowgreen;
 
-    padding:20px;
-    border: 20px solid blue;
-    margin: 20px
+
 }
