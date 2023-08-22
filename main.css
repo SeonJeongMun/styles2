@@ -1,29 +1,32 @@
 /* 박스모델
-margin collapsing 마진 상쇄 마진 겹침, 마진 중복
-여러 블록 요소들의 위아래 마진이 경우에 따라 가장 큰 크기를 가진마진으로 결합(상쇄)되는 현상
-
-1. 인접형제 - 두 형제 요소의 위 아래 여백이 만나 상쇄
-2. 부모-자식 요소 간
--부모 블록에 border, padding, inline content가 없어서 부모 자식의 margin-top이 만나는 경우
--부모 블록에 border, padding, inline content가 없고 부모-자식을 분리할 height값이 지정되지 않아 부모와 자식의 margin-bottom이 만나는 경우
-3. border, padding, content가 없고 height 또한 존재하지 않으면, 해당 블록의 margin-top과 margin-bottom이 상쇄
+여백- padding도 단축속성
+margin과 사용법 비슷
+패딩 상쇄는 없음
+패딩은 음수 사용 x
 */
-body {
-    margin: 0;
-}    
+
 
 #parent {
-    width: 100px;
-    height: 100px;
-    margin-top: 30px;
-    background-color: blue;
+    width: 300px;
+    height: 300px;
+    
+   background-color: blue;
+
+    
 }
 
 #child {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     
-    margin-top: 40px;
+    padding: 10%;
+    /*%는 항상 부모의 width(가로)의 10% */
     background-color: red;
+}
 
+#grandchild {
+    width: 50px;
+    height: 50px;
+    
+    background-color: yellow;
 }
