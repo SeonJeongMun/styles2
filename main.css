@@ -1,27 +1,22 @@
 /* 
 단위와 값
 
-절대길이-px, in,pt
-브라우저 사용자 설정에서 크게/작게 해도 적용 안됨-접근성 문제 유발
+상대길이 vw, vh 디바이스 크기에 따라서 반응형으로 웹사이트를 만들 때 유용
+100vw 100vh가 뷰포인트
 
-상대길이 - em, rem
-브라우저 사용자 설정에서 크게/작게 하면 그대로 적용됨
-1em == 부모의 font-size
-1rem == root의 font-size (body의 크기. 기본값으로 나오는듯)
+length
+1. 상대길이
+    a. 글꼴 상대길이 - em, rem...
+    b. 뷰포트 백분율길이 - vw,vh...
+    
+2. 절대길이 -px...    
 
  */
-
-div {
-    border:1px solid silver;
-    padding: 1px;
+body {
+    margin: 0;
 }
-
-.parent {
-    color: red;
-    font-size: 2rem;
-}
-
-.child {
-    color:blue;
-    font-size:0.5rem;
+.container {
+    background-color: orange;
+    width: 50vw;
+    height: 100vh;
 }
