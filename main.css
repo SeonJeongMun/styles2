@@ -1,19 +1,16 @@
 /* 
-함수 표기법
-
-calc() 여러개의 단위 같이 표현할수 있도록
-연산자 좌우에는 공백 하나씩 해줘야 
-ex) calc(100% - 50px)
-min,max는 익스플로러에서 지원x 다른것으로 대체해야
-min(),
-둘중 작은거 
-max()
-둘중 큰거
+박스모델 구조
+margin
+border
+padding
+content
 */
     
-.container {
-    /*width: calc(100% - 50px);*/
-    width: max(100%, 50px)
+.box {
+    width: 200px;
     height: 200px;
-    background-color: yellow;
+
+    padding:20px;
+    border: 20px solid blue;
+    margin: 20px
 }
