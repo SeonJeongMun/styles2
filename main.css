@@ -1,22 +1,24 @@
 /* 박스모델
-크기= width, height
+크기= 
+max-width, max-height
+min-width, min-height
+반응형 사이트 만들 때 유용 min(), max()는 익스플로러 안되지만 얘네들은 됨
+더이상 늘어나거나 줄어들지 않게
 초기값 auto
 상속 x
-inline 요소는 콘텐츠가 자동으로 width, height 설정 따라서 
-width, height 설정 불가
 
 */
     
-.block {
-    width: 300px;
-    height: 200px;
-    background-color: wheat;
+#parent {
+    width: 50px;
+    height: 300px;
+    background-color: green;
 }
-.inline {
-    width: 300px;
-    height: 200px;
-    /* 해도 적용안됨 */
-    background-color: yellowgreen;
 
-
+#child {
+    width: 50%;
+    min-width: 100px;
+    /* 부모 width가 50px이므로 튀어나감 */ 
+    height: 100px;
+    background-color: aqua;
 }
