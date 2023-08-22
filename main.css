@@ -1,26 +1,18 @@
 /* 폰트 텍스트 관련 속성
 
-text-align 텍스트 정렬 블럭요소
-p는 블럭요소(늘어난 화면길이대로) span은 인라인요소(내용물 가로길이따라)
+text-indent 여백 블럭속성 퍼센트 px 가능 
 */
 
-p, span {
-    background-color: red;
+.paragraph1 {
+    text-indent: 20px;
 }
 
-.block {
-    text-align: center;
-}
 .container {
-    text-align: center; 
+    text-indent: 50px;
+    /* 상속 됨 */
 }
+
 .inline {
-    text-align: center;
-    /* 인라인요소라서 적용안됨
-    이 때는 span이 들어있는 div(블럭요소)에 text-align 하기
-    ex)
-    .container {
-        text-align: center; 
-    }
-    */
+    text-indent: 20px;
+    /*인라인 요소라서 적용 안됨 */
 }
