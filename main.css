@@ -1,21 +1,19 @@
 /* 
-단위와 값
-상대길이 %
-부모 요소에 따라서 %
+함수 표기법
 
- */
-
- body {
-    margin: 0;
- }
-.parent {
-    background-color: orange;
-    width: 100px;
-    height: 100px;
-}
-.child {
-    background-color: red;
-    width: 50px;
-    height: 30px;
-}
+calc() 여러개의 단위 같이 표현할수 있도록
+연산자 좌우에는 공백 하나씩 해줘야 
+ex) calc(100% - 50px)
+min,max는 익스플로러에서 지원x 다른것으로 대체해야
+min(),
+둘중 작은거 
+max()
+둘중 큰거
+*/
     
+.container {
+    /*width: calc(100% - 50px);*/
+    width: max(100%, 50px)
+    height: 200px;
+    background-color: yellow;
+}
