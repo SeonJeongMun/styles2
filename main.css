@@ -1,24 +1,29 @@
 /* 박스모델
-크기= 
-max-width, max-height
-min-width, min-height
-반응형 사이트 만들 때 유용 min(), max()는 익스플로러 안되지만 얘네들은 됨
-더이상 늘어나거나 줄어들지 않게
-초기값 auto
+margin 단축속성 ( top right bottom left)
 상속 x
 
 */
     
 #parent {
-    width: 50px;
+    width: 300px;
     height: 300px;
-    background-color: green;
+    
+    border:5px solid blue;
 }
 
 #child {
-    width: 50%;
-    min-width: 100px;
-    /* 부모 width가 50px이므로 튀어나감 */ 
-    height: 100px;
-    background-color: aqua;
+   width: 50px;
+   height: 50px;
+
+   margin: 40px 10px 30px 5px; 
+   /* margin: 10px 20px일 경우
+   앞의 10px은 위 아래 여백/ 공백 뒤 20px는 왼,오 여백
+   margin: 40px 10px 30px 5px일 경우
+   시계방향 위40 오10 아래30 왼5 
+   margin: 10px 20px 30px일 경우
+   위10 좌우20 아래30
+   
+   %를 마진으로 사용할 때는 부모의 width의 %가 됨 주의!*/
+    
+   border: 5px solid tomato;
 }
