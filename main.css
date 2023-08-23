@@ -1,19 +1,15 @@
 /* 박스모델
-테두리 - 
-border-style,
-border-width, 
-border-color
-위아래좌우다르게 할 수 있음
-style이 none이면 0으로 계산됨
+border 단축속성
+style이 none이면 테두리 보이지 않으므로 꼭 넣어야
+순서는 상관없음
+outline은 박스모델에 속해있지 않음
 */
 
 .box {
     width: 300px;
     height: 300px;
 
-    border-style: dotted solid;
-    border-width: 10px;
-    border-color:red;
+    border: dotted red 5px;
 
     background-color: rgb(175,207,233);
 }
