@@ -1,33 +1,15 @@
 /* 
 레이아웃
 
-요소를 없ㅇ는 방법
-display: none,
-visibility: hidden
--레이아웃을 변경하지 않고 요소를 숨김
-그 자리는 비워두고 보이지 않게 함
-
-웹사이트 만들 때 클릭하면 안보이고 클릭하면 보이는 그런걸 만들 때 사용
+float 요소 좌 우로 흐를 수 있도록
 */
+.image {
+    width:100px;
+    height:100px;
 
-div {
-    height: 200px;
-    border: solid;
-}
-
-
-.box2 {
-    /*display: none;
-    /* 코드상으로는 존재하지만 존재하지 않았던 것 처럼 박스1 다음 바로 박스 3가 나오고 안보임 */
-    visibility: hidden;
-}
-
-.box1 {
-    background-color: yellow;
-}
-.box2 {
-    background-color: orange;
-}
-.box3 {
     background-color: pink;
+    border: 5px solid blue;
+
+    float: left;
+    margin: 10px;
 }
