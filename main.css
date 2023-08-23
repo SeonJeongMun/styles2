@@ -1,17 +1,23 @@
-/* 박스모델
-box-sizing
-content-box: 기본값
-width,height가 콘텐츠 영역을 의미
-bordr-box: 
-width, height가 패딩과 보더까지 포함
+/* 
+레이아웃
+
+display- inline, block, inline-block
+
+1. inline 요소 ex)span
+영역의 크기가 내부 콘텐츠 크기로 정해짐
+margin, padding의 top/bottom여백은 추가 불가(좌우는 가능)
+여러 요소가 가로배치가 된다
+
+2. block 요소 ex) div, p..
+영역의 크기를 width,height로 지정가능
+width정하지 않으면 가로 전체 차지
+여러 요소가 새로 배치됨
+
+3. inline-block ex)input..
+영역 크기를 width, height로 지정가능
+여러 요소가 가로배치 됨
 */
 
-.box {
-    width: 300px;
-    height: 200px;
-    padding: 20px;
-    border: 30px solid blue;
-    background-color: rgb(175,207,233);
-
-    box-sizing: border-box;
+span {
+    display: block;
 }
