@@ -1,17 +1,17 @@
 /* 박스모델
-border-radius
-ex) 30px :  모서리에 생기는 원의 반지름 길이 
-
-%사용시 가로측: width 백분율 세로축: height 백분율
-margin padding처럼 네가지값 따로 작성 가능
+box-sizing
+content-box: 기본값
+width,height가 콘텐츠 영역을 의미
+bordr-box: 
+width, height가 패딩과 보더까지 포함
 */
 
 .box {
     width: 300px;
-    height: 300px;
-
-    border: dotted red 5px;
-    border-radius: 30px;
-
+    height: 200px;
+    padding: 20px;
+    border: 30px solid blue;
     background-color: rgb(175,207,233);
+
+    box-sizing: border-box;
 }
