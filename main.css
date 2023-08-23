@@ -1,8 +1,9 @@
 /* 박스모델
-border 단축속성
-style이 none이면 테두리 보이지 않으므로 꼭 넣어야
-순서는 상관없음
-outline은 박스모델에 속해있지 않음
+border-radius
+ex) 30px :  모서리에 생기는 원의 반지름 길이 
+
+%사용시 가로측: width 백분율 세로축: height 백분율
+margin padding처럼 네가지값 따로 작성 가능
 */
 
 .box {
@@ -10,6 +11,7 @@ outline은 박스모델에 속해있지 않음
     height: 300px;
 
     border: dotted red 5px;
+    border-radius: 30px;
 
     background-color: rgb(175,207,233);
 }
