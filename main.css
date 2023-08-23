@@ -1,32 +1,19 @@
 /* 박스모델
-여백- padding도 단축속성
-margin과 사용법 비슷
-패딩 상쇄는 없음
-패딩은 음수 사용 x
+테두리 - 
+border-style,
+border-width, 
+border-color
+위아래좌우다르게 할 수 있음
+style이 none이면 0으로 계산됨
 */
 
-
-#parent {
+.box {
     width: 300px;
     height: 300px;
-    
-   background-color: blue;
 
-    
-}
+    border-style: dotted solid;
+    border-width: 10px;
+    border-color:red;
 
-#child {
-    width: 100px;
-    height: 100px;
-    
-    padding: 10%;
-    /*%는 항상 부모의 width(가로)의 10% */
-    background-color: red;
-}
-
-#grandchild {
-    width: 50px;
-    height: 50px;
-    
-    background-color: yellow;
+    background-color: rgb(175,207,233);
 }
