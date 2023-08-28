@@ -1,14 +1,17 @@
 /* 
-background-image가 colorqhek 앞에 있음. 따라서 이미지에 빈 부분이 있으면 그 사이로 컬러 보임. */
+background-repeat
+기본이 repeat
+repeat-x: x축만 반복(가로)
+repeat-y: y축만 반복(세로)
+no-repeat: x
+*/
 
-div {
-   width: 500px;
-   height: 500px;
-
-   position: fixed;
-   top: 10px;
-   left: 10px;
+.box1 {
    
-   background-image: url(https://thumb.mt.co.kr/06/2022/01/2022011309492336686_1.jpg/dims/optimize/)
+   height: 1000px;
+
+   background-image:url("https://thumb.mt.co.kr/06/2022/01/2022011309492336686_1.jpg/dims/optimize/");
+   background-repeat: repeat-y;
+
    
 }
