@@ -1,17 +1,33 @@
 /* 
 레이아웃
 
-overflow
+z-index
+*)z-index를 안 쓰더라도
+position이 다 static이면 코드 순서대로 쌓임
+position이 relative 등이면 제일 위에 뜸
 
-박스 외부로 넘쳐흐르는 내용 처리방법
-scroll: 스크롤바가 생김
-hidden: 안 보임
-visible: 넘치는 그대로 보임 
+다 static이 아닐경우는 z-index 값이 큰 박스가 위에 뜸
 */
 div {
    background-color: aqua;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    border: 3px solid orange
     
-    overflow: auto;
+
+}
+
+#box2, #box3 {
+    margin-top: -30px;
+}
+
+#box2 {
+    margin-left: 40px;
+
+    position: relative;
+}
+
+#box3 {
+    position: relative;
+    z-index:-1;
 }
