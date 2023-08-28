@@ -1,17 +1,14 @@
 /* 
-opacity 불투명도 설정 initial : 1 불투명
-0: 완전 투명 0~1 요소가 반투명
-*/
+background-image가 colorqhek 앞에 있음. 따라서 이미지에 빈 부분이 있으면 그 사이로 컬러 보임. */
+
 div {
-   width: 150px;
-   height: 150px;
+   width: 500px;
+   height: 500px;
 
    position: fixed;
    top: 10px;
    left: 10px;
    
-   background-color: aqua;
-   opacity: 0.5;
-   /* background-color: rgba( , , , 0.5)이렇게 하면 배경색만 불투명도 조절되고 글씨는 그대로 
-   그러나 opacity가 0일 경우 내부 모든 요소(글씨 등)가 투명해짐 */ 
+   background-image: url(https://thumb.mt.co.kr/06/2022/01/2022011309492336686_1.jpg/dims/optimize/)
+   
 }
