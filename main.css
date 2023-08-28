@@ -12,10 +12,25 @@ div {
     border: 5px solid orangered
     
 }
+#parent {
+    position: relative;
+
+    /*box의 바로 위 조상인 parent가 relative가 아니라면 
+    더 위 조상이자 초기 컨테이닝 블록인 body에서 기준으로 100px이 됨
+    */
+}
 
 #box {
-    background-color: peachpuff;
-    position: relative;
-    left: -80px;
-    top: 50px;
+    width: 150px;
+    height: 100px;
+    border-color: darkblue;
+    background-color: cornflowerblue;
+    border-radius: 30px;
+
+    position:absolute;
+
+    top: 100px;
+    /* 조상을 기준으로 위에서 100px
+    position이 absolute인 요소는 
+    조상 중에서 position이 static이 아닌 요소를 찾아 기준점을 삼는다. 
 }
