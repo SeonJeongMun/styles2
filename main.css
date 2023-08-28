@@ -1,15 +1,21 @@
 /* 
 레이아웃
 
-float 요소 좌 우로 흐를 수 있도록
+position- relative
+자기자신을 기준으로
+-도 사용가능
+top, left가 우선 
 */
-.image {
-    width:100px;
-    height:100px;
+div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid orangered
+    
+}
 
-    background-color: pink;
-    border: 5px solid blue;
-
-    float: left;
-    margin: 10px;
+#box {
+    background-color: peachpuff;
+    position: relative;
+    left: -80px;
+    top: 50px;
 }
