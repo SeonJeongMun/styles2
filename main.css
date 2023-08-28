@@ -1,10 +1,9 @@
 /* 
 레이아웃
+absolute와 fixed 붕뜬다.
 
-position- relative
-자기자신을 기준으로
--도 사용가능
-top, left가 우선 
+absolute:부모요소를 타고 올라가면서, position-static이 아닌 요소를 기준점으로 삼음
+fixed:뷰포트의 초기 컨테이닝 블록을 기준으로 삼아 배치
 */
 div {
     width: 200px;
@@ -15,9 +14,7 @@ div {
 #parent {
     position: relative;
 
-    /*box의 바로 위 조상인 parent가 relative가 아니라면 
-    더 위 조상이자 초기 컨테이닝 블록인 body에서 기준으로 100px이 됨
-    */
+
 }
 
 #box {
@@ -27,10 +24,10 @@ div {
     background-color: cornflowerblue;
     border-radius: 30px;
 
-    position:absolute;
+    position:fixed;
 
-    top: 100px;
-    /* 조상을 기준으로 위에서 100px
-    position이 absolute인 요소는 
-    조상 중에서 position이 static이 아닌 요소를 찾아 기준점을 삼는다. 
+    bottom: 40px;
+    right: 40px;
+    /* 뷰포트 초기 컨테이닝 블록 기준
+    스크롤해도 안 움직임 absolute의 경우는 부모따라 올라감 */
 }
