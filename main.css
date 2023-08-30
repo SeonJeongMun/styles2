@@ -1,19 +1,18 @@
 /* 
 
-item : flex-grow
-수용가능한 공간이 남으면 공간을 나눠서 꽉 채워서 사용.
-양수 사용가능
-if) 2번째 박스가 2, 3번째 박스가 1이라면 남은 공간을 각각 2:1로 나눠서 사용
+item : flex-shrink
+기본값: 1 0을 포함한 숫자 가능 소수점 가능 
+줄어든 영역을 나눠가짐  grow와 원리는 동일하지만 반대개념
 */
 
 .container {
     height: 500px;
     border: 5px dashed orange;
     display: flex;
-    flex-wrap: wrap;
+   
 }
 .item {
-    width: 100px;
+    width: 200px;
     height: 100px;
     margin: 5px;
     background-color: paleturquoise;
@@ -21,10 +20,10 @@ if) 2번째 박스가 2, 3번째 박스가 1이라면 남은 공간을 각각 2:
     font-size: 30px;
 }
 
-.item:nth-child(2) {
-   flex-grow: 2;
+.item:nth-child(1) {
+   flex-shrink: 0;
 }
 
 .item:nth-child(3) {
-    flex-grow:1;
+    flex-shrink: 2;
  }
