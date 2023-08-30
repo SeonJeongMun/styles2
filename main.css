@@ -1,13 +1,33 @@
 /* 
-transform-origin 기준점 변경
-기본값이 center
-px 키워드 사용가능
+transition 전환
+
+transition-property, transition-duration
+
 */
 
-#bolt {
-    width: 400px;
-    margin: 100px;
-    transform: scale(1.3);
-    transform-origin: top left; 
-    /* top left를 기준으로 스케일이 1.3배 된것 rotate 도 마찬가지로 적용됨 */
+.box {
+    width: 300px;
+    height: 80px;
+    border: 2px dashed teal;
+    background-color: salmon;
+    font-size: 50px;
+    color: white;
+
+    transition-property: background-color;
+    transition-duration: 2s;
+    /* 마우스 올릴 때 내릴때 둘다 적용 */
+}
+
+.box:hover {
+    width: 350px;
+    background-color: blue;
+    color: black;
+    font-size: 60px;
+
+    /*
+    여기다가 
+    transition-property: background-color;
+    transition-duration: 2s;
+    하면 마우스 올릴 때만(hover) 적용 */
+
 }
