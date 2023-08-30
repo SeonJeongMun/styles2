@@ -2,6 +2,7 @@
 transition 전환
 
 transition-property, transition-duration
+transition-delay, transition-timing-function
 
 */
 
@@ -13,21 +14,21 @@ transition-property, transition-duration
     font-size: 50px;
     color: white;
 
-    transition-property: background-color;
-    transition-duration: 2s;
-    /* 마우스 올릴 때 내릴때 둘다 적용 */
+    /*transition-property: all;
+    transition-duration: 3s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+    */
+    transition: all 3s ease-in-out 1s;
+
 }
 
 .box:hover {
-    width: 350px;
+    height: 450px;
     background-color: blue;
     color: black;
     font-size: 60px;
 
-    /*
-    여기다가 
-    transition-property: background-color;
-    transition-duration: 2s;
-    하면 마우스 올릴 때만(hover) 적용 */
+
 
 }
