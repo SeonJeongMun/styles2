@@ -1,17 +1,18 @@
 /* 
-background-repeat
-기본이 repeat
-repeat-x: x축만 반복(가로)
-repeat-y: y축만 반복(세로)
-no-repeat: x
+background-position은 no-repeat일때만 사용할 수 있는것이 아님
+background-position: x축 y축;
+키워드를 넣을 경우 순서 상관 없음 top center나 center top이나 같음
 */
 
 .box1 {
-   
-   height: 1000px;
+   width: 300px;
+   height: 500px;
+   border: solid red;
 
-   background-image:url("https://thumb.mt.co.kr/06/2022/01/2022011309492336686_1.jpg/dims/optimize/");
-   background-repeat: repeat-y;
+   background-image:url("https://i.namu.wiki/i/O6-N4ykXIPKFceisGrY5Wn3eouo3-yCuFkxE-hXQIrnUCUnHmuAOYxMwMGz2KFD4aDaGJwPJz2fjG1Uz2vyQHQ.webp");
+   background-repeat: repeat;
+
+   background-position: top center ;
 
    
 }
