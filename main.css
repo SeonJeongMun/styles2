@@ -1,20 +1,16 @@
 /* 
 
-개별 아이템의 순서를 바꾸고 싶을 때 item에 order씀
-기본값 0 정수 사용가능 
+item : flex-grow
+수용가능한 공간이 남으면 공간을 나눠서 꽉 채워서 사용.
+양수 사용가능
+if) 2번째 박스가 2, 3번째 박스가 1이라면 남은 공간을 각각 2:1로 나눠서 사용
 */
 
 .container {
     height: 500px;
     border: 5px dashed orange;
     display: flex;
-    
-
-    /* wrap 하면 브라우저 크기 줄이면 5번박스가 자리 없어서 자동으로 내려감 */
-    
-    /* flex-flow: column wrap과 
-    flex-direction: column;
-    flex-wrap: wrap-reverse; 가 같음*/
+    flex-wrap: wrap;
 }
 .item {
     width: 100px;
@@ -23,9 +19,12 @@
     background-color: paleturquoise;
     border: 3px solid blue;
     font-size: 30px;
+}
 
+.item:nth-child(2) {
+   flex-grow: 2;
 }
 
 .item:nth-child(3) {
-    order: 1;
-}
+    flex-grow:1;
+ }
