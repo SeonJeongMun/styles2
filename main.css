@@ -1,8 +1,10 @@
 /* 
 
-item: flex-basis
-flex-basis 안해주면 늘어난 길이부분만 flex-grow 비율대로 적용
-but flex-basis 해주면 콘텐츠 자체가 flex-grow 비율대로 적용
+item: flex shorthand
+grow(number) shrink(number) basis(length/percentage/auto)
+!) 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때 
+flex-basis 값은 초기값인 auto가 아니라 0
+px이나 %는 basis
 */
 
 .container {
@@ -19,17 +21,5 @@ but flex-basis 해주면 콘텐츠 자체가 flex-grow 비율대로 적용
     border: 3px solid blue;
     font-size: 30px;
 
-    flex-basis: 0;
-}
-
-.item:nth-child(1) {
-    flex-grow: 5;
-}
-
-.item:nth-child(2) {
-    flex-grow: 1;
-}
-
-.item:nth-child(3) {
-    flex-grow: 3;
+    flex 1;
 }
