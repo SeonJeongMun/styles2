@@ -1,25 +1,33 @@
 /* 
 
-item: flex shorthand
-grow(number) shrink(number) basis(length/percentage/auto)
-!) 한 개 또는 두 개의 단위 없는 숫자 값을 사용할 때 
-flex-basis 값은 초기값인 auto가 아니라 0
-px이나 %는 basis
+container : justify-content
+주축을 기준으로 시작부분인지 끝부분인지 중앙인지를 생각
+flex-end, flex-start, center
+space-between(end, start에 끝까지 붙어서 사이사이 공간 간격이 같음)
+space-around (각각 요소 앞뒤로 동일한 여백 추가)
 */
 
 .container {
-    height: 500px;
+    
     border: 5px dashed orange;
     display: flex;
+
    
 }
 .item {
-    width: 200px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     background-color: paleturquoise;
     border: 3px solid blue;
     font-size: 30px;
 
     flex 1;
+}
+
+.container:nth-child(1) {
+    justify-content: space-between;
+}
+.container:nth-child(2) {
+    justify-content: space-around;
 }
