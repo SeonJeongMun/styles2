@@ -1,34 +1,38 @@
 /* 
 animation
-animation-play-state
+적용 과정
+1) 기존스타일
+2) keyframes 첫번째
+3) ing
+4) keyframes 마지막
+5) 기존스타일
+여기서 234는 애니메이션 상황 
+forwards를 하면 1~ 4번까지만 진행, backwards는 2번부터 시작~5까지
+bothsms 2~4까지
 */
 
 div {
     width: 100px;
     height: 100px;
     border: 10px solid teal;
-    border-radius: 80px;
+
 }
 
 .box1 {
-    animation-name: rotate;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-play-state: paused;
-    
+   background-color: aqua;
+   animation: fill-mode 3s 1s;
+   animation-fill-mode: forwards;
 }
 
 
-.box1:hover {
-    animation-play-state: running;
-}
-@keyframes rotate {
-    from {
-        transform: rotate(0);
+@keyframes fill-mode {
+    0% {
+        background-color: red;
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        width: 200px;
+    }
+    100% {
+        background-color: black;
     }
 }
