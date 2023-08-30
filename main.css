@@ -1,10 +1,13 @@
 /* 
-transform: translate() 
-x,y 둘다 입력 가능 하나만 입력하면 x만 
-translatex, translatey 가능 
-음수 가능 percent 가능 
+transform: skew() 기울이기 
+x,y 둘다 입력 가능 하나만 입력하면 x만(translation, skew)
+(스케일의 경우 하나만 입력하면 x,y둘다 적용) 
+skewx, skewy 가능 
+음수 가능 90하면 우리눈에 안 보임
 */
 
 #bolt {
     width: 400px;
-    transform: translate(50%, 30%);
+    margin: 100px;
+    transform: skew(40deg);
+}
