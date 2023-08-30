@@ -1,18 +1,20 @@
 /* 
-background-position은 no-repeat일때만 사용할 수 있는것이 아님
-background-position: x축 y축;
-키워드를 넣을 경우 순서 상관 없음 top center나 center top이나 같음
+background-origin
+설정하지 않으면 padding-box가 원점이 됨
+
+content-box, padding-box, border-box 가능 margin은 x
 */
 
 .box1 {
-   width: 300px;
+   
    height: 500px;
-   border: solid red;
+   border: 30px dashed red;
+   padding: 30px;
 
    background-image:url("https://i.namu.wiki/i/O6-N4ykXIPKFceisGrY5Wn3eouo3-yCuFkxE-hXQIrnUCUnHmuAOYxMwMGz2KFD4aDaGJwPJz2fjG1Uz2vyQHQ.webp");
-   background-repeat: repeat;
+   background-repeat: no-repeat;
 
-   background-position: top center ;
+   background-origin: border-box;
 
    
 }
