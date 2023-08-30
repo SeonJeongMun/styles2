@@ -1,13 +1,13 @@
 /* 
-transform: skew() 기울이기 
-x,y 둘다 입력 가능 하나만 입력하면 x만(translation, skew)
-(스케일의 경우 하나만 입력하면 x,y둘다 적용) 
-skewx, skewy 가능 
-음수 가능 90하면 우리눈에 안 보임
+transform-origin 기준점 변경
+기본값이 center
+px 키워드 사용가능
 */
 
 #bolt {
     width: 400px;
     margin: 100px;
-    transform: skew(40deg);
+    transform: scale(1.3);
+    transform-origin: top left; 
+    /* top left를 기준으로 스케일이 1.3배 된것 rotate 도 마찬가지로 적용됨 */
 }
