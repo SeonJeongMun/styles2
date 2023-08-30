@@ -1,9 +1,10 @@
 /* 
-transform: rotate() 값 하나만 소수점, 음수 가능(시계반대방향)
-turn, deg 등 가능
+transform: translate() 
+x,y 둘다 입력 가능 하나만 입력하면 x만 
+translatex, translatey 가능 
+음수 가능 percent 가능 
 */
 
 #bolt {
     width: 400px;
-    transform: rotate(0.5turn) scale(0.5);
-}
+    transform: translate(50%, 30%);
