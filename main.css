@@ -1,25 +1,25 @@
 /* 
 
 Flexbox 1차원공간에서의 직선 정렬
-
-용어
-flex container, flex item,
-main axis, corss axis
-
-container 속성인지 item 속성인지를 잘 파악하기
-
+flex-direction
+1) 주축의 위치(H/V) 2) 주축의 방향(정/ 역방향)
+기본 row 
+row-reverse colum column-reverse
 */
 
 .container {
+    height: 500px;
     border: 5px dashed orange;
     display: flex;
+    flex-direction: column-reverse;
 
 }
 .item {
     width: 50px;
     height: 50px;
+    margin: 5px;
     background-color: paleturquoise;
     border: 3px solid blue;
-    
+    font-size: 30px;
 
 }
