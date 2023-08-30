@@ -1,18 +1,8 @@
 /* 
-background 단축속성
-스페이싱 or /로 구분(position/size)
-기본값을 알고 있어야
+transform: scale() 크기 조절
 */
 
-.box1 {
-   
-   height: 500px;
-   border: 5px dashed red;
-   padding: 30px;
-
-   background: url("https://i.namu.wiki/i/O6-N4ykXIPKFceisGrY5Wn3eouo3-yCuFkxE-hXQIrnUCUnHmuAOYxMwMGz2KFD4aDaGJwPJz2fjG1Uz2vyQHQ.webp") no-repeat center/80%;
-   background-color: blue; 
-
-
-   
+#bolt {
+    width: 400px;
+    transform: scale(0.5, 0.5);
 }
