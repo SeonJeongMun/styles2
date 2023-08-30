@@ -1,34 +1,27 @@
 /* 
 transition 전환
 
-transition-property, transition-duration
-transition-delay, transition-timing-function
+transition + transform 
 
 */
 
 .box {
-    width: 300px;
-    height: 80px;
-    border: 2px dashed teal;
-    background-color: salmon;
-    font-size: 50px;
-    color: white;
+    width: 100px;
+    height: 100px;
+    border: 10px solid teal;
+    background-color: rgb(204, 253, 225);
+    border-radius: 30px;
+   
 
-    /*transition-property: all;
-    transition-duration: 3s;
-    transition-delay: 1s;
-    transition-timing-function: ease-in-out;
-    */
-    transition: all 3s ease-in-out 1s;
+    
+
+   transform-origin: top right;
+    transition: all 1s ease-in-out;
 
 }
 
 .box:hover {
-    height: 450px;
-    background-color: blue;
-    color: black;
-    font-size: 60px;
-
+   transform: rotate(360deg);
 
 
 }
