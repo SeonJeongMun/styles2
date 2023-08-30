@@ -1,8 +1,9 @@
 /* 
-transform: scale() 크기 조절
+transform: rotate() 값 하나만 소수점, 음수 가능(시계반대방향)
+turn, deg 등 가능
 */
 
 #bolt {
     width: 400px;
-    transform: scale(0.5, 0.5);
+    transform: rotate(0.5turn) scale(0.5);
 }
