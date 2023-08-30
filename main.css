@@ -1,20 +1,20 @@
 /* 
-background-origin
-설정하지 않으면 padding-box가 원점이 됨
-
-content-box, padding-box, border-box 가능 margin은 x
+background-size
+- 이미지 비율을 유지하며 요소의 크기에 맞춰짐 
+contain(작은 쪽에 비율맞춤), cover(이미지 찌그러지지않는 한도내에서 제일 크게
+-length(w,h둘 중 하나만하면 비율 맞춰지나 둘 다 입력하면 비율 찌그러질수 있음) , percentage
 */
 
 .box1 {
    
    height: 500px;
-   border: 30px dashed red;
+   border: 5px dashed red;
    padding: 30px;
 
    background-image:url("https://i.namu.wiki/i/O6-N4ykXIPKFceisGrY5Wn3eouo3-yCuFkxE-hXQIrnUCUnHmuAOYxMwMGz2KFD4aDaGJwPJz2fjG1Uz2vyQHQ.webp");
    background-repeat: no-repeat;
-
-   background-origin: border-box;
+   background-color: blue; 
+   background-size: 100px 100px;
 
    
 }
