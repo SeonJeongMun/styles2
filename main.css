@@ -1,8 +1,5 @@
 /* 
-transition 전환
-
-transition + transform 
-
+animation
 */
 
 .box {
@@ -12,16 +9,28 @@ transition + transform
     background-color: rgb(204, 253, 225);
     border-radius: 30px;
    
-
-    
-
-   transform-origin: top right;
-    transition: all 1s ease-in-out;
+    animation: my-first-animation 2s infinite;
 
 }
 
-.box:hover {
-   transform: rotate(360deg);
-
+@keyframes my-first-animation {
+    0% { 
+        font-size: 20px;/* width: 100px;해도 되고 기본 100px이었으므로 비워놔도 됨 */
+    }
+    50% {
+        width: 300px;
+        font-size: 80px;
+    }
+    100% {
+        font-size: 20px;
+    }
+    
+    
+    /*
+    아래처럼 하고 
+    .box에서 alternate넣어도 됨 
+    from {width: 100px;}
+    to { width: 200px;}
+    */
 
 }
