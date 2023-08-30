@@ -1,6 +1,13 @@
 /* 
 
-Flexbox
+Flexbox 1차원공간에서의 직선 정렬
+
+용어
+flex container, flex item,
+main axis, corss axis
+
+container 속성인지 item 속성인지를 잘 파악하기
+
 */
 
 .container {
