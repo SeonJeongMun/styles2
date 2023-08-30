@@ -1,8 +1,8 @@
 /* 
 
-item : flex-shrink
-기본값: 1 0을 포함한 숫자 가능 소수점 가능 
-줄어든 영역을 나눠가짐  grow와 원리는 동일하지만 반대개념
+item: flex-basis
+flex-basis 안해주면 늘어난 길이부분만 flex-grow 비율대로 적용
+but flex-basis 해주면 콘텐츠 자체가 flex-grow 비율대로 적용
 */
 
 .container {
@@ -18,12 +18,18 @@ item : flex-shrink
     background-color: paleturquoise;
     border: 3px solid blue;
     font-size: 30px;
+
+    flex-basis: 0;
 }
 
 .item:nth-child(1) {
-   flex-shrink: 0;
+    flex-grow: 5;
+}
+
+.item:nth-child(2) {
+    flex-grow: 1;
 }
 
 .item:nth-child(3) {
-    flex-shrink: 2;
- }
+    flex-grow: 3;
+}
