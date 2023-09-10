@@ -2,20 +2,24 @@
 Grid
 
 Container-display
-grid-template-columns, grid-template-rows
-
-fr, px, em 사용가능
+grid-template-areas
+각 영역이 네모형태가 되어야함 ㄴ,ㄷ이런 모양 x
 */
 
 .container {
     border: 5px dashed orange;
+    width: 400px;
+    height: 400px;
     display: grid;
     
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    grid-template-rows: repeat(4,1fr);
-    /* repeat(반복하는 횟수, 반복하고자 하는 단위 px도 가능) */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
     
+    grid-template-areas: 
+        "hd hd ma ma ma"
+        "hd hd sb sb ."
+        "ft ft ft ft ft";
+    /* 차지하지 않는 칸의 경우 . 쓰기 */
 }
 .item {
     background-color: antiquewhite;
@@ -23,4 +27,18 @@ fr, px, em 사용가능
     font-size: 30px;
 
     
+}
+
+/* 각 영역 이름은 편의에 맞게 만들어주면 됨 */
+.header {
+    grid-area: hd;
+}
+.main {
+    grid-area: ma;
+}
+.sidebar {
+    grid-area: sb;
+}
+.footer {
+    grid-area: ft;
 }
