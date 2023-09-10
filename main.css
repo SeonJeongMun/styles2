@@ -1,23 +1,25 @@
 /* 
 Grid
 
-Container- grid-auto-flow
+Container- grid shorthand
+외재적(명시적) 속성: grid-template-rows/columns
+grid-template-areas
+
+내재적(암시적) 속성: grid-auto-rows/columns
+grid-auto-flow 속성 
+
+형태 == grid: row관련 속성 / column 관련 속성 
 */
 
 .container {
     border: 5px dashed orange;
     
     display: grid;
+    /* grid-template-rows: 1fr 2fr;
+    grid-template-columns: 100px 200px; 
+    아래와 똑같음 */
     
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-auto-flow: row dense;
-    /* grid-auto-flow: column을 하면
-    흘러 가는 방향이 column으로 바뀜*/
-    /*dense가 없으면 2번쩨 아이템이 세 칸을 차지해야하므로 
-    1하고 옆을 비우고 밑에 2나오고 밑에 3,4... 이런식
-    그러나 dense를 하면 1옆에 빈 공간에 3,4번이 땡겨지고 
-    아래에 2가나오고 그 아래에 5,6...이런식임 */
+    grid: 1fr 2fr / auto-flow 100px 200px;
    
 }
 .item {
@@ -28,6 +30,3 @@ Container- grid-auto-flow
     
 }
 
-.item:nth-child(2) {
-    grid-column: span 3;
-}
