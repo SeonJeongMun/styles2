@@ -2,15 +2,20 @@
 Grid
 
 Container-display
+grid-template-columns, grid-template-rows
+
+fr, px, em 사용가능
 */
 
 .container {
     border: 5px dashed orange;
-    display: inline-grid;
-    /* inline이란 말 안 써주면 블락요소라서 컨테이너 두개가 위아래로 정렬됨. 
-    display: inline-grid 는 컨테이너 자체는 inline으로 컨테이너 내부는 grid로 만든것 */
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 150px;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: repeat(4,1fr);
+    /* repeat(반복하는 횟수, 반복하고자 하는 단위 px도 가능) */
+    
 }
 .item {
     background-color: antiquewhite;
