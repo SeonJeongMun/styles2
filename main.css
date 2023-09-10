@@ -1,7 +1,7 @@
 /* 
 Grid
 
-Container- grid-auto-rows, grid-auto-columns
+Container- grid-auto-flow
 */
 
 .container {
@@ -9,13 +9,16 @@ Container- grid-auto-rows, grid-auto-columns
     
     display: grid;
     
-    grid-template-columns: 100px 150px 80px;
-    grid-template-rows: 1fr 1fr 1fr;
-   /* template라는 이름에 걸맞게 내부에 아이템이 있건 없건 
-   행과 열의 크기를 명시적으로 미리 만들어 놓음 */
-
-   grid-auto-rows: 200px;
-   /* template에 명시하지 못했지만 뒤에 추가로 넘쳐나는 item의 암시적인 크기 설정 */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-auto-flow: row dense;
+    /* grid-auto-flow: column을 하면
+    흘러 가는 방향이 column으로 바뀜*/
+    /*dense가 없으면 2번쩨 아이템이 세 칸을 차지해야하므로 
+    1하고 옆을 비우고 밑에 2나오고 밑에 3,4... 이런식
+    그러나 dense를 하면 1옆에 빈 공간에 3,4번이 땡겨지고 
+    아래에 2가나오고 그 아래에 5,6...이런식임 */
+   
 }
 .item {
     background-color: antiquewhite;
@@ -25,3 +28,6 @@ Container- grid-auto-rows, grid-auto-columns
     
 }
 
+.item:nth-child(2) {
+    grid-column: span 3;
+}
