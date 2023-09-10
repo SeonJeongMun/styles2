@@ -1,22 +1,21 @@
 /* 
 Grid
 
-Container- row-gap, column-gap, gap
-grid-row-gap/row-gap둘다 사용가능
+Container- grid-auto-rows, grid-auto-columns
 */
 
 .container {
     border: 5px dashed orange;
-    width: 400px;
-    height: 400px;
+    
     display: grid;
     
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4,1fr);
-    row-gap: 20px;
-    column-gap: 50px;
-    /* gap: 20px 50px;도 같은 표현 단 앞쪽이 row, 뒷쪽이 column */
-    /*간격 차지하고 남은 크기에서 비율대로 차지 */
+    grid-template-columns: 100px 150px 80px;
+    grid-template-rows: 1fr 1fr 1fr;
+   /* template라는 이름에 걸맞게 내부에 아이템이 있건 없건 
+   행과 열의 크기를 명시적으로 미리 만들어 놓음 */
+
+   grid-auto-rows: 200px;
+   /* template에 명시하지 못했지만 뒤에 추가로 넘쳐나는 item의 암시적인 크기 설정 */
 }
 .item {
     background-color: antiquewhite;
