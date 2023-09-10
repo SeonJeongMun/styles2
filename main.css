@@ -1,9 +1,8 @@
 /* 
 Grid
 
-Container-display
-grid-template-areas
-각 영역이 네모형태가 되어야함 ㄴ,ㄷ이런 모양 x
+Container- row-gap, column-gap, gap
+grid-row-gap/row-gap둘다 사용가능
 */
 
 .container {
@@ -12,14 +11,12 @@ grid-template-areas
     height: 400px;
     display: grid;
     
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(3,1fr);
-    
-    grid-template-areas: 
-        "hd hd ma ma ma"
-        "hd hd sb sb ."
-        "ft ft ft ft ft";
-    /* 차지하지 않는 칸의 경우 . 쓰기 */
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    /* gap: 20px 50px;도 같은 표현 단 앞쪽이 row, 뒷쪽이 column */
+    /*간격 차지하고 남은 크기에서 비율대로 차지 */
 }
 .item {
     background-color: antiquewhite;
@@ -29,16 +26,3 @@ grid-template-areas
     
 }
 
-/* 각 영역 이름은 편의에 맞게 만들어주면 됨 */
-.header {
-    grid-area: hd;
-}
-.main {
-    grid-area: ma;
-}
-.sidebar {
-    grid-area: sb;
-}
-.footer {
-    grid-area: ft;
-}
