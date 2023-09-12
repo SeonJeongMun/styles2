@@ -2,7 +2,10 @@
 Grid
 
 Container
-justify-content, align-content
+justify-items, align-itmes
+하나의 아이템들이 어떻게 배치될지
+기본값이 stretch
+self는 자기자신
 */
 
 .container {
@@ -13,18 +16,24 @@ justify-content, align-content
     width:100%;
     height: 500px;
 
-    grid-template-rows:repeat(3,100px);
-    grid-template-columns: repeat(3,100px);
-
-    justify-content: space-between;
-    align-content: space-between;
+    grid-template-rows:repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    
+    justify-items: center;
+    align-items: center;
    
 }
 .item {
     background-color: antiquewhite;
     border:3px solid blue;
     font-size: 30px;
-
     
 }
 
+.item:nth-child(1) {
+    width: 50px;
+    height:50px;
+}
+.item:nth-child(2) {
+    justify-self: end;
+}
