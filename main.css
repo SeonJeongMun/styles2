@@ -1,15 +1,23 @@
 /* 
 반응형 디자인 vs 적응형 디자인(모바일, 웹.... 다 따로 만들기)
-
+@media (min-width:) and (max-width:) 이면 and
+@media () , () 이면 or
+@media screen and (orientation: landscape)는 가로모드 
 */
 
 body {
     background-color: aliceblue;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width:300px) {
     body {
         background-color: blue;
     }
 }
-/* 브라우저 창의 크기를 300px 이하로 줄이면 하늘색에서 파란색 됨 */
+/* 미디어 쿼리가 여러개일경우 폴더 안에 다른 css파일 만들고 
+html파일에서 각각의 css파일을 링크 걸어준후 거기서 바로 조건 작성해도 됨 
+ex) 
+<head>
+    <link rel="stylesheet" media="screen and (max-width:300px)" href="/mobile.css">
+    <link rel="stylesheet" media="screen and (min-wihth:300px)" href="/desktop.css">...
+    이런식으로 */
