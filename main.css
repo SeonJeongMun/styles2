@@ -1,10 +1,11 @@
 /* 
 Grid
 Item
-gird-row, grid-column
-grid-row-start/end에 들어가는 숫자는 몇번째 행,열이 아니라 선의 번호
-ex) 3X3 일 때 위에서부터 차례대로 1,2,3,4번 반대쪽은 각각 -4,-3,-2,-1에 대응
-단 마이너스 넘버링은 명시적으로 작성했을 때만 있음
+grid-area
+
+1) grid-template-areas에서 영역 이름을 설정할 때 사용
+2) grid-row/column-start/end 단축속성
+grid-area: row start / column start / row end / column end 순
 */
 
 .container {
@@ -29,13 +30,10 @@ ex) 3X3 일 때 위에서부터 차례대로 1,2,3,4번 반대쪽은 각각 -4,-
 .item:first-child {
     background-color: orange;
 
-    grid-row-start: 1;
-    grid-row-end: -1;
-    /*이것의 shorthand가 
-    grid-row: 1 / -1; 
-    span 사용시
-    grid-row: 2 / span 2 
-    2번줄부터 두칸 차지라는 뜻*/
-    grid-column: 1 / -2;
+   /* grid-row: 4 / span 2;
+   grid-column: 2 / -1; 
+   아래와 같음*/
+
+   grid-area: 4 / 2 / span 2 / -1;
     
 }
