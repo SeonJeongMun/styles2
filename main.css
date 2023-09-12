@@ -1,9 +1,9 @@
 /* 
 Grid
 
-grid 단위 : fr, min-content,max-content
-min-content는 item안의 내용이 여러개의 단어로 이루어져있을 경우 가장 긴 단어 크기에 맞춰서 item크기 설정됨
-max-content는 item안 내용 길이 만큼 크기 설정
+grid 단위 : auto-fill, auto-fit
+auto-fill: 칼럼/로우의 개수 유연하게 채울 수 있음
+auto-fit: 기본적 사용방법은 같으나 남는 공간 x
 */
 
 .container {
@@ -13,8 +13,9 @@ max-content는 item안 내용 길이 만큼 크기 설정
    
     
 
-    grid-template-rows:repeat(3,200px);
-    grid-template-columns: max-content 1fr 1fr;
+    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: 150px;
+    
     
 }
 .item {
