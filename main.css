@@ -1,11 +1,10 @@
 /* 
 Grid
-
-Container
-justify-items, align-itmes
-하나의 아이템들이 어떻게 배치될지
-기본값이 stretch
-self는 자기자신
+Item
+gird-row, grid-column
+grid-row-start/end에 들어가는 숫자는 몇번째 행,열이 아니라 선의 번호
+ex) 3X3 일 때 위에서부터 차례대로 1,2,3,4번 반대쪽은 각각 -4,-3,-2,-1에 대응
+단 마이너스 넘버링은 명시적으로 작성했을 때만 있음
 */
 
 .container {
@@ -13,15 +12,12 @@ self는 자기자신
     
     display: grid;
    
-    width:100%;
-    height: 500px;
+    
 
-    grid-template-rows:repeat(3,1fr);
+    grid-template-rows:repeat(3,100px);
     grid-template-columns: repeat(3,1fr);
     
-    justify-items: center;
-    align-items: center;
-   
+  
 }
 .item {
     background-color: antiquewhite;
@@ -30,10 +26,16 @@ self는 자기자신
     
 }
 
-.item:nth-child(1) {
-    width: 50px;
-    height:50px;
-}
-.item:nth-child(2) {
-    justify-self: end;
+.item:first-child {
+    background-color: orange;
+
+    grid-row-start: 1;
+    grid-row-end: -1;
+    /*이것의 shorthand가 
+    grid-row: 1 / -1; 
+    span 사용시
+    grid-row: 2 / span 2 
+    2번줄부터 두칸 차지라는 뜻*/
+    grid-column: 1 / -2;
+    
 }
